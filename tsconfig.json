@@ -1,28 +1,21 @@
 {
   "compilerOptions": {
-    // Project structure
-    "rootDir": "./",        // compile from repo root
-    "outDir": "./dist",     // compiled JS output
+    "rootDir": "./",          // compile from repo root
+    "outDir": "./dist",
     "module": "commonjs",
     "target": "ES2020",
-
-    // Node.js and modules
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-
-    // Strict type checking
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-
-    // Source maps
     "sourceMap": true
   },
-  "include": ["server.ts", "src/**/*"],   // compile main server + src folder
+  "include": ["server.ts", "src/**/*"],   // explicitly include server.ts
   "exclude": ["node_modules", "dist"]
 }
