@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.ts"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node server.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,7 @@
     "uuid": "^13.0.0"
   },
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",

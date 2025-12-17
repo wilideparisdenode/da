@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
     // Project structure
-    "rootDir": "./src",
-    "outDir": "./dist",
-
-    // Module & target
+    "rootDir": "./",        // compile from repo root
+    "outDir": "./dist",     // compiled JS output
     "module": "commonjs",
     "target": "ES2020",
 
-    // Node.js types
+    // Node.js and modules
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -25,6 +23,6 @@
     // Source maps
     "sourceMap": true
   },
-  "include": ["src/**/*"],
+  "include": ["server.ts", "src/**/*"],   // compile main server + src folder
   "exclude": ["node_modules", "dist"]
 }
