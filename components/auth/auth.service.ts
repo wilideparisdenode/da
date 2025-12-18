@@ -71,6 +71,7 @@ class AuthService {
 
       // Check if user is active
       if (user.status !== 'active') {
+        console.log(user.status)
         throw new Error('Account is not active');
       }
 

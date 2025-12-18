@@ -10,8 +10,8 @@ dotenv_1.default.config();
 const MONGO_URI = process.env.MONGO_DB_CONNECTION_STRING;
 const c = async () => {
     try {
-        await mongoose_1.default.connect(MONGO_URI);
-        console.log('✅ MongoDB connected hello');
+       const connection=   await mongoose_1.default.connect(MONGO_URI);
+       if(connection) console.log('✅ MongoDB connected hello');
     }
     catch (error) {
         console.error('❌ MongoDB connection error:', error);
