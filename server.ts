@@ -24,7 +24,7 @@ app.use(cors({
     "http://localhost:5173",
     "http://localhost:5174",
     "https://dashboard-saas-git-master-wilideparisdenodes-projects.vercel.app",
-    "https://dashboard-saas-h26gy72m5-wilideparisdenodes-projects.vercel.app"
+    "https://dashboard-saas-39xhynyis-wilideparisdenodes-projects.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
