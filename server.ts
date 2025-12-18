@@ -20,7 +20,7 @@ c();
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173","http://localhost:5174"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
@@ -41,7 +41,6 @@ app.use('/api/users', AuthMiddleware.verifyToken,userRoutes);
 app.use('/api/products',AuthMiddleware.verifyToken, productRoutes);
 app.use('/api/orders',AuthMiddleware.verifyToken, orderRoutes);
 app.use('/api/payments',AuthMiddleware.verifyToken, paymentRoutes);
-
 // Error handling
 app.use(errorHandler);
 

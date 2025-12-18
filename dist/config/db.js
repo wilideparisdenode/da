@@ -7,11 +7,11 @@ exports.c = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/d_app';
+const MONGO_URI = process.env.MONGO_DB_CONNECTION_STRING;
 const c = async () => {
     try {
         await mongoose_1.default.connect(MONGO_URI);
-        console.log('✅ MongoDB connected');
+        console.log('✅ MongoDB connected hello');
     }
     catch (error) {
         console.error('❌ MongoDB connection error:', error);
